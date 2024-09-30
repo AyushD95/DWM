@@ -12,8 +12,13 @@
         <img src="data:image/png;base64,{{ product_plot_url }}" alt="Sales Over Time" class="product-image">
 
         <h2>Sales Forecast</h2>
-        <img src="data:image/png;base64,{{ forecast_plot_url }}" alt="Sales Forecast" class="product-image">
-
+         {% if forecast_plot_url %}
+        <img src="data:image/png;base64,{{ forecast_plot_url }}" alt="Sales Forecast Plot" class="product-image">
+    {% else %}
+        {% if forecast_message %}
+            <h3 style="color: red;">{{ forecast_message }}</h3>
+        {% endif %}
+    {% endif %}
         <h2>Summary</h2>
         <p>Total Sales: <strong>${{ total_sales }}</strong></p>
         <p>Total Profit: <strong>${{ total_profit }}</strong></p>
