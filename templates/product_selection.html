@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style3.css') }}">
+    <title>Select Product</title>
+</head>
+<body class="bg-dark text-light">
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Select Product</h1>
+        <p class="text-center mb-4">Choose a product from the dropdown below to view its details.</p>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form id="productForm" action="" method="GET" class="shadow p-4 bg-info rounded">
+                    <input type="hidden" name="category" value="{{ category }}">
+                    <input type="hidden" name="subcategory" value="{{ subcategory }}">
+                    <div class="form-group">
+                        <label for="product" class="text-dark">Product:</label>
+                        <select name="product" id="product" class="form-control bg-light text-dark border-light" onchange="submitForm()">
+                            <option value="" disabled selected>Select a product</option>
+                            {% for product in products %}
+                            <option value="{{ product }}">{{ product }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script>
+        function submitForm() {
+            const productSelect = document.getElementById('product');
+            const selectedProduct = productSelect.value;
+
+            if (selectedProduct) {
+                // Redirect to the product detail page with the product name in the URL
+                window.location.href = "{{ url_for('product_detail', product_name='') }}" + selectedProduct;
+            }
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

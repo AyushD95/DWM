@@ -1,0 +1,54 @@
+body {
+    background-color: #343a40; /* Dark background color */
+    font-family: 'Arial', sans-serif; /* Clean font for readability */
+    color: #ffffff; /* White color for main text */
+}
+
+h1 {
+    color: #ffffff; /* White color for the main title */
+}
+
+h2, h4 {
+    color: #f8f9fa; /* Light color for section titles */
+}
+
+.container {
+    margin-top: 50px; /* Top margin for spacing */
+    padding: 20px; /* Padding for the container */
+    border-radius: 10px; /* Rounded corners for container */
+}
+
+.shadow {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
+}
+
+.bg-info {
+    background-color: #17a2b8 !important; /* Light blue color for the form */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Primary button color */
+    border: none; /* No border for button */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+form {
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+form:hover {
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2); /* Slight shadow on hover */
+}
+
+ul {
+    list-style-type: square; /* Square bullets for lists */
+    padding-left: 20px; /* Padding for list indentation */
+    color: #f8f9fa; /* Light color for list items */
+}
+
+.text-dark {
+    color: #212529 !important; /* Dark text for labels */
+}

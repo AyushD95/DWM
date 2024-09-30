@@ -1,0 +1,56 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #212529; /* Dark background for the body */
+    color: #f8f9fa; /* Light text color for readability */
+    margin: 0; /* Remove default margin */
+    padding: 20px; /* Add padding around the body */
+}
+
+h1, h2, h3, h4 {
+    color: #f1c40f; /* Gold color for headings */
+    text-align: center; /* Center align headings */
+}
+
+/* Container styles */
+.container {
+    max-width: 800px; /* Set a maximum width for the container */
+    margin: auto; /* Center align the container */
+    padding: 20px; /* Padding for inner spacing */
+    background-color: #343a40; /* Darker background for the container */
+    border-radius: 8px; /* Rounded corners for the container */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+/* Image styles */
+.product-image {
+    display: block; /* Make images block-level elements */
+    margin: 20px auto; /* Center align images */
+    max-width: 100%; /* Ensure images fit within the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+/* Link styles */
+.back-button {
+    display: inline-block; /* Make link appear as a block */
+    margin-top: 20px; /* Margin above the button */
+    padding: 10px 20px; /* Padding for the button */
+    background-color: #f1c40f; /* Gold background for the button */
+    color: #212529; /* Dark text color for contrast */
+    text-decoration: none; /* Remove underline */
+    border-radius: 4px; /* Rounded corners for button */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.back-button:hover {
+    background-color: #e0b80e; /* Darker gold on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px; /* Less padding on smaller screens */
+    }
+}

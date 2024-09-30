@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style4.css') }}">
+    <title>Product Detail</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Product Detail: {{ product_name }}</h1>
+
+        <h2>Sales Over Time</h2>
+        <img src="data:image/png;base64,{{ product_plot_url }}" alt="Sales Over Time" class="product-image">
+
+        <h2>Sales Forecast</h2>
+        <img src="data:image/png;base64,{{ forecast_plot_url }}" alt="Sales Forecast" class="product-image">
+
+        <h2>Summary</h2>
+        <p>Total Sales: <strong>${{ total_sales }}</strong></p>
+        <p>Total Profit: <strong>${{ total_profit }}</strong></p>
+        <p>Total Quantity Sold: <strong>{{ total_quantity }}</strong></p>
+
+        <a href="{{ url_for('dashboard') }}" class="back-button">Back to Dashboard</a>
+    </div>
+</body>
+</html>
